@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI for Business Leaders | Consultoria & Capacitação em IA para Líderes</title>
+  <meta name="description" content="Transforme sua gestão com Inteligência Artificial. Consultoria e capacitação estratégica em IA para gestores, coordenadores e diretores.">
+
+  <!-- Preconnect Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <header class="nav" id="nav">
+    <div class="container flex-between">
+      <a href="#" class="nav__logo">
+        <span class="nav__logo-text">AI <span class="gradient-text">for Business</span> Leaders</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="#servicos" class="nav__link">Serviços</a>
+        <a href="#metodologia" class="nav__link">Metodologia</a>
+        <a href="#resultados" class="nav__link">Resultados</a>
+        <a href="#sobre" class="nav__link">Sobre</a>
+        <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="btn btn--primary nav__cta">
+          <svg class="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Fale Conosco
+        </a>
+      </nav>
+
+      <button class="nav__hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu overlay -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="section section--dark hero" id="hero">
+    <div class="hero__bg-pattern"></div>
+    <div class="container hero__content">
+      <span class="overline animate-on-scroll">Consultoria & Capacitação em IA</span>
+      <h1 class="hero__title animate-on-scroll">
+        Transforme sua Gestão com<br>
+        <span class="gradient-text">Inteligência Artificial</span>
+      </h1>
+      <p class="hero__subtitle animate-on-scroll">
+        Ajudamos gestores, coordenadores e diretores a integrar IA nos seus processos
+        de forma estratégica — com clareza, método e resultados mensuráveis.
+      </p>
+      <div class="btn-group animate-on-scroll">
+        <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
+          <svg class="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Agendar Conversa
+        </a>
+        <a href="#metodologia" class="btn btn--ghost btn--lg">Ver Metodologia</a>
+      </div>
+      <div class="segmented-line segmented-line--lg animate-on-scroll" style="margin-top: 3rem;">
+        <span class="segmented-line__violet"></span>
+        <span class="segmented-line__white"></span>
+        <span class="segmented-line__blue"></span>
+      </div>
+    </div>
+    <div class="hero__scroll-indicator">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PAIN POINTS
+       ============================================ -->
+  <section class="section section--light" id="desafios">
+    <div class="container">
+      <div class="section-header section-header--center animate-on-scroll">
+        <span class="overline">Por que líderes travam com IA?</span>
+        <h2 class="section-title">Os Desafios que Impedem sua <span class="gradient-text">Transformação</span></h2>
+        <p class="section-subtitle">A maioria dos gestores sabe que precisa adotar IA, mas não sabe por onde começar — e o custo de esperar cresce a cada trimestre.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="card card--light animate-on-scroll">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none"><defs><linearGradient id="g1" x1="0" y1="0" x2="48" y2="48"><stop stop-color="#9F33FF"/><stop offset="1" stop-color="#3355FF"/></linearGradient></defs><path d="M24 6L6 16v16l18 10 18-10V16L24 6z" stroke="url(#g1)" stroke-width="2" fill="none"/><circle cx="24" cy="24" r="4" fill="url(#g1)"/><path d="M24 14v-4M24 38v-4M14 24h-4M38 24h-4" stroke="url(#g1)" stroke-width="2"/></svg>
+          </div>
+          <h3 class="card__title">Falta de Clareza Estratégica</h3>
+          <p class="card__text">Dezenas de ferramentas de IA surgem todo mês, mas sem um framework estratégico, cada decisão vira aposta — e o orçamento evapora sem resultado concreto.</p>
+        </div>
+
+        <div class="card card--light animate-on-scroll">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none"><defs><linearGradient id="g2" x1="0" y1="0" x2="48" y2="48"><stop stop-color="#9F33FF"/><stop offset="1" stop-color="#3355FF"/></linearGradient></defs><circle cx="16" cy="20" r="6" stroke="url(#g2)" stroke-width="2"/><circle cx="32" cy="20" r="6" stroke="url(#g2)" stroke-width="2"/><path d="M8 36c0-4.418 3.582-8 8-8h16c4.418 0 8 3.582 8 8" stroke="url(#g2)" stroke-width="2"/><path d="M20 20h8" stroke="url(#g2)" stroke-width="2" stroke-dasharray="2 2"/></svg>
+          </div>
+          <h3 class="card__title">Equipes Desalinhadas</h3>
+          <p class="card__text">Enquanto a liderança enxerga IA como prioridade, as equipes não têm capacitação nem roteiro claro — gerando resistência e projetos abandonados na metade.</p>
+        </div>
+
+        <div class="card card--light animate-on-scroll">
+          <div class="card__icon">
+            <svg viewBox="0 0 48 48" fill="none"><defs><linearGradient id="g3" x1="0" y1="0" x2="48" y2="48"><stop stop-color="#9F33FF"/><stop offset="1" stop-color="#3355FF"/></linearGradient></defs><path d="M12 36V24M24 36V16M36 36V20" stroke="url(#g3)" stroke-width="3" stroke-linecap="round"/><path d="M8 12l8 6 8-8 8 4 8-6" stroke="url(#g3)" stroke-width="2" fill="none" stroke-dasharray="3 3"/></svg>
+          </div>
+          <h3 class="card__title">ROI Incerto</h3>
+          <p class="card__text">Sem métricas definidas antes da implementação, fica impossível provar valor para o board — e projetos de IA viram custo em vez de investimento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SERVICES / SOLUTION
+       ============================================ -->
+  <section class="section section--dark" id="servicos">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="overline" style="color: var(--color-cyan);">Nossos Serviços</span>
+        <h2 class="section-title">Soluções sob Medida para <span class="gradient-text">sua Liderança</span></h2>
+        <p class="section-subtitle">Uma abordagem estruturada que transforma a complexidade da IA em vantagem competitiva para sua organização.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="services-content">
+          <div class="service-block animate-on-scroll">
+            <div class="service-block__accent"></div>
+            <div class="service-block__body">
+              <h3 class="service-block__title">Consultoria Estratégica em IA</h3>
+              <p class="service-block__text">Diagnóstico completo da maturidade digital da sua organização, mapeamento de oportunidades de automação inteligente e criação de um roadmap executivo com prioridades claras e KPIs definidos.</p>
+              <div class="diamond-list">
+                <span class="diamond-bullet">Assessment de Maturidade Digital</span>
+                <span class="diamond-bullet">Roadmap Estratégico com ROI Projetado</span>
+                <span class="diamond-bullet">Seleção de Tecnologias e Parceiros</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-block animate-on-scroll">
+            <div class="service-block__accent"></div>
+            <div class="service-block__body">
+              <h3 class="service-block__title">Capacitação de Lideranças</h3>
+              <p class="service-block__text">Programas práticos e imersivos que dão aos gestores a fluência necessária em IA para tomar decisões informadas, liderar equipes técnicas e comunicar valor para stakeholders.</p>
+              <div class="diamond-list">
+                <span class="diamond-bullet">Workshops Executivos de IA Aplicada</span>
+                <span class="diamond-bullet">Mentoria para C-Level e Diretoria</span>
+                <span class="diamond-bullet">Treinamento de Equipes Multidisciplinares</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-block animate-on-scroll">
+            <div class="service-block__accent"></div>
+            <div class="service-block__body">
+              <h3 class="service-block__title">Implementação Assistida</h3>
+              <p class="service-block__text">Acompanhamento técnico-estratégico na implementação de MVPs de IA, com sprints ágeis, métricas de impacto e transferência de conhecimento para garantir autonomia interna.</p>
+              <div class="diamond-list">
+                <span class="diamond-bullet">Sprints de Implementação com MVPs</span>
+                <span class="diamond-bullet">Métricas de Impacto em Tempo Real</span>
+                <span class="diamond-bullet">Transferência de Conhecimento</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="services-visual animate-on-scroll">
+          <div class="hex-image">
+            <div class="hex-image__inner">
+              <div class="hex-image__placeholder">
+                <svg viewBox="0 0 120 120" fill="none"><defs><linearGradient id="gHex" x1="0" y1="0" x2="120" y2="120"><stop stop-color="#9F33FF" stop-opacity="0.3"/><stop offset="1" stop-color="#3355FF" stop-opacity="0.3"/></linearGradient></defs><rect width="120" height="120" fill="url(#gHex)" rx="12"/><path d="M60 25L90 42.5v35L60 95 30 77.5v-35L60 25z" stroke="#9F33FF" stroke-width="1.5" fill="none" opacity="0.5"/><circle cx="60" cy="60" r="15" stroke="#3355FF" stroke-width="1" fill="none" opacity="0.5"/><circle cx="60" cy="60" r="4" fill="#9F33FF" opacity="0.7"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       METHODOLOGY
+       ============================================ -->
+  <section class="section section--light" id="metodologia">
+    <div class="container">
+      <div class="section-header section-header--center animate-on-scroll">
+        <span class="overline">Fluxo de Implementação</span>
+        <h2 class="section-title">Do Diagnóstico à <span class="gradient-text">Execução</span></h2>
+        <p class="section-subtitle">Uma metodologia validada que elimina incertezas e entrega resultados tangíveis em cada fase.</p>
+      </div>
+
+      <div class="segmented-line segmented-line--lg segmented-line--center animate-on-scroll" style="margin-bottom: var(--gap-lg);">
+        <span class="segmented-line__violet"></span>
+        <span class="segmented-line__white"></span>
+        <span class="segmented-line__blue"></span>
+      </div>
+
+      <div class="grid grid--3 methodology-grid">
+        <div class="phase animate-on-scroll">
+          <span class="phase__label">Fase 01</span>
+          <h3 class="phase__title">Discovery</h3>
+          <p class="phase__text">Mapeamento de processos e identificação de oportunidades de automação inteligente com foco em impacto imediato.</p>
+          <div class="diamond-list" style="margin-bottom: var(--gap-sm);">
+            <span class="diamond-bullet">Inventário de Dados</span>
+            <span class="diamond-bullet">Maturidade Digital</span>
+            <span class="diamond-bullet">Competências da Liderança</span>
+          </div>
+          <div class="phase__result">
+            <strong>Entregável:</strong> Relatório de AI Readiness com roadmap priorizado.
+          </div>
+        </div>
+
+        <div class="phase animate-on-scroll">
+          <span class="phase__label">Fase 02</span>
+          <h3 class="phase__title">Architecture</h3>
+          <p class="phase__text">Design da infraestrutura de dados e seleção de modelos de IA customizados para os objetivos estratégicos da organização.</p>
+          <div class="diamond-list" style="margin-bottom: var(--gap-sm);">
+            <span class="diamond-bullet">Arquitetura de Microsserviços</span>
+            <span class="diamond-bullet">Sistemas de Recomendação</span>
+            <span class="diamond-bullet">Automação de Workflows</span>
+          </div>
+          <div class="phase__result">
+            <strong>Entregável:</strong> Blueprint técnico com stack definida e cronograma.
+          </div>
+        </div>
+
+        <div class="phase animate-on-scroll">
+          <span class="phase__label">Fase 03</span>
+          <h3 class="phase__title">Execution</h3>
+          <p class="phase__text">Implementação ágil de MVPs com foco em ROI e escalabilidade imediata, acompanhada de capacitação contínua.</p>
+          <div class="diamond-list" style="margin-bottom: var(--gap-sm);">
+            <span class="diamond-bullet">Sprints de Implementação</span>
+            <span class="diamond-bullet">Treinamento Hands-on</span>
+            <span class="diamond-bullet">Métricas de Impacto</span>
+          </div>
+          <div class="phase__result">
+            <strong>Entregável:</strong> MVP funcional com KPIs validados e equipe treinada.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       RESULTS / METRICS
+       ============================================ -->
+  <section class="section section--dark" id="resultados">
+    <div class="container">
+      <div class="section-header section-header--center animate-on-scroll">
+        <span class="overline">Resultados Comprovados</span>
+        <h2 class="section-title">Impacto que se <span class="gradient-text">Mede</span></h2>
+        <p class="section-subtitle">Números reais de organizações que implementaram IA com nossa metodologia estruturada.</p>
+      </div>
+
+      <div class="grid grid--4">
+        <div class="stat animate-on-scroll">
+          <div class="stat__number" data-count="45">0%</div>
+          <div class="stat__label">Aumento em Produtividade</div>
+          <div class="segmented-line" style="margin-top: 1rem;">
+            <span class="segmented-line__violet"></span>
+            <span class="segmented-line__white"></span>
+            <span class="segmented-line__blue"></span>
+          </div>
+        </div>
+
+        <div class="stat animate-on-scroll">
+          <div class="stat__number" data-count="3" data-suffix="x">0x</div>
+          <div class="stat__label">Retorno sobre Investimento</div>
+          <div class="segmented-line" style="margin-top: 1rem;">
+            <span class="segmented-line__violet"></span>
+            <span class="segmented-line__white"></span>
+            <span class="segmented-line__blue"></span>
+          </div>
+        </div>
+
+        <div class="stat animate-on-scroll">
+          <div class="stat__number" data-count="60">0%</div>
+          <div class="stat__label">Redução em Tarefas Manuais</div>
+          <div class="segmented-line" style="margin-top: 1rem;">
+            <span class="segmented-line__violet"></span>
+            <span class="segmented-line__white"></span>
+            <span class="segmented-line__blue"></span>
+          </div>
+        </div>
+
+        <div class="stat animate-on-scroll">
+          <div class="stat__number" data-count="100" data-prefix="+" data-suffix="">0</div>
+          <div class="stat__label">Líderes Capacitados</div>
+          <div class="segmented-line" style="margin-top: 1rem;">
+            <span class="segmented-line__violet"></span>
+            <span class="segmented-line__white"></span>
+            <span class="segmented-line__blue"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       TESTIMONIALS
+       ============================================ -->
+  <section class="section section--light" id="depoimentos">
+    <div class="container">
+      <div class="section-header section-header--center animate-on-scroll">
+        <span class="overline">Depoimentos</span>
+        <h2 class="section-title">O que Dizem nossos <span class="gradient-text">Clientes</span></h2>
+      </div>
+
+      <div class="grid grid--3 testimonials-grid">
+        <div class="testimonial animate-on-scroll">
+          <div class="testimonial__quote-mark">"</div>
+          <p class="testimonial__text">A consultoria trouxe uma clareza que não tínhamos. Em 3 meses, automatizamos processos que consumiam 40% do tempo da equipe de operações.</p>
+          <div class="testimonial__divider"></div>
+          <div class="testimonial__author">Carlos Mendes</div>
+          <div class="testimonial__role">Diretor de Operações — Indústria</div>
+        </div>
+
+        <div class="testimonial animate-on-scroll">
+          <div class="testimonial__quote-mark">"</div>
+          <p class="testimonial__text">O programa de capacitação mudou a mentalidade da liderança. Hoje tomamos decisões sobre IA com confiança, sem depender exclusivamente do time técnico.</p>
+          <div class="testimonial__divider"></div>
+          <div class="testimonial__author">Ana Paula Ribeiro</div>
+          <div class="testimonial__role">VP de Inovação — Serviços Financeiros</div>
+        </div>
+
+        <div class="testimonial animate-on-scroll">
+          <div class="testimonial__quote-mark">"</div>
+          <p class="testimonial__text">A metodologia Discovery-Architecture-Execution nos deu um roadmap claro. O ROI do primeiro MVP superou as expectativas em 2x no primeiro trimestre.</p>
+          <div class="testimonial__divider"></div>
+          <div class="testimonial__author">Ricardo Torres</div>
+          <div class="testimonial__role">Gerente Geral — Tecnologia</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ABOUT / AUTHORITY
+       ============================================ -->
+  <section class="section section--dark" id="sobre">
+    <div class="container">
+      <div class="section-header section-header--center animate-on-scroll">
+        <span class="overline">Quem Somos</span>
+        <h2 class="section-title">Autoridade em IA <span class="gradient-text">para Negócios</span></h2>
+        <p class="section-subtitle">Somos especialistas em transformação digital com foco em Inteligência Artificial aplicada ao mundo corporativo. Nossa missão é desmistificar a IA para líderes que precisam de resultados — não de buzzwords.</p>
+      </div>
+
+      <div class="founders-grid">
+        <!-- Fundador 1 -->
+        <div class="founder-card animate-on-scroll">
+          <div class="founder-card__photo">
+            <div class="founder-card__photo-placeholder">
+              <svg viewBox="0 0 160 160" fill="none"><defs><linearGradient id="gF1" x1="0" y1="0" x2="160" y2="160"><stop stop-color="#9F33FF" stop-opacity="0.25"/><stop offset="1" stop-color="#3355FF" stop-opacity="0.25"/></linearGradient></defs><rect width="160" height="160" fill="url(#gF1)" rx="80"/><circle cx="80" cy="65" r="24" stroke="#9F33FF" stroke-width="1.5" fill="none" opacity="0.6"/><path d="M44 125c0-19.882 16.118-36 36-36s36 16.118 36 36" stroke="#3355FF" stroke-width="1.5" fill="none" opacity="0.6"/></svg>
+            </div>
+          </div>
+          <h3 class="founder-card__name">Nome do Fundador 1</h3>
+          <span class="founder-card__role">Co-founder & CEO</span>
+          <p class="founder-card__bio">Breve descrição da experiência profissional, formação e especialidades em IA e transformação digital para lideranças corporativas.</p>
+          <div class="diamond-list founder-card__expertise">
+            <span class="diamond-bullet">Estratégia de IA</span>
+            <span class="diamond-bullet">Transformação Digital</span>
+            <span class="diamond-bullet">Liderança Executiva</span>
+          </div>
+        </div>
+
+        <!-- Fundador 2 -->
+        <div class="founder-card animate-on-scroll">
+          <div class="founder-card__photo">
+            <div class="founder-card__photo-placeholder">
+              <svg viewBox="0 0 160 160" fill="none"><defs><linearGradient id="gF2" x1="0" y1="0" x2="160" y2="160"><stop stop-color="#3355FF" stop-opacity="0.25"/><stop offset="1" stop-color="#9F33FF" stop-opacity="0.25"/></linearGradient></defs><rect width="160" height="160" fill="url(#gF2)" rx="80"/><circle cx="80" cy="65" r="24" stroke="#3355FF" stroke-width="1.5" fill="none" opacity="0.6"/><path d="M44 125c0-19.882 16.118-36 36-36s36 16.118 36 36" stroke="#9F33FF" stroke-width="1.5" fill="none" opacity="0.6"/></svg>
+            </div>
+          </div>
+          <h3 class="founder-card__name">Nome do Fundador 2</h3>
+          <span class="founder-card__role">Co-founder & CTO</span>
+          <p class="founder-card__bio">Breve descrição da experiência profissional, formação e especialidades em arquitetura de dados, modelos de linguagem e implementação técnica.</p>
+          <div class="diamond-list founder-card__expertise">
+            <span class="diamond-bullet">Arquitetura de Dados</span>
+            <span class="diamond-bullet">Modelos de Linguagem</span>
+            <span class="diamond-bullet">Implementação Técnica</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-stats animate-on-scroll" style="margin-top: var(--gap-xl);">
+        <div class="about-stat">
+          <span class="about-stat__number gradient-text">10+</span>
+          <span class="about-stat__label">Anos de Experiência</span>
+        </div>
+        <div class="about-stat">
+          <span class="about-stat__number gradient-text">50+</span>
+          <span class="about-stat__label">Projetos Entregues</span>
+        </div>
+        <div class="about-stat">
+          <span class="about-stat__number gradient-text">30+</span>
+          <span class="about-stat__label">Empresas Atendidas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FINAL CTA
+       ============================================ -->
+  <section class="section section--dark cta-final" id="contato">
+    <div class="cta-final__glow"></div>
+    <div class="container text-center" style="position: relative; z-index: 1;">
+      <div class="animate-on-scroll">
+        <span class="overline" style="color: var(--color-cyan);">Próximo Passo</span>
+        <h2 class="cta-final__title">Pronto para a <span class="gradient-text">Nova Era?</span></h2>
+        <p class="cta-final__subtitle">Agende uma conversa estratégica e descubra como a IA pode transformar os resultados da sua organização nos próximos 90 dias.</p>
+        <div class="btn-group" style="justify-content: center; margin-top: var(--gap-lg);">
+          <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
+            <svg class="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Agendar Conversa
+          </a>
+          <a href="#servicos" class="btn btn--ghost btn--lg">Conhecer Serviços</a>
+        </div>
+      </div>
+      <div class="segmented-line segmented-line--lg segmented-line--center animate-on-scroll" style="margin-top: var(--gap-xl);">
+        <span class="segmented-line__violet"></span>
+        <span class="segmented-line__white"></span>
+        <span class="segmented-line__blue"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="segmented-line segmented-line--lg segmented-line--center" style="margin-bottom: var(--gap-lg);">
+      <span class="segmented-line__violet"></span>
+      <span class="segmented-line__white"></span>
+      <span class="segmented-line__blue"></span>
+    </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="nav__logo-text" style="font-size: 1.25rem;">AI <span class="gradient-text">for Business</span> Leaders</span>
+          <p class="footer-tagline">Consultoria & Capacitação em IA para líderes que dominam o futuro.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4 class="footer-links__title">Navegação</h4>
+          <a href="#servicos" class="footer-links__link">Serviços</a>
+          <a href="#metodologia" class="footer-links__link">Metodologia</a>
+          <a href="#resultados" class="footer-links__link">Resultados</a>
+          <a href="#sobre" class="footer-links__link">Sobre</a>
+          <a href="#contato" class="footer-links__link">Contato</a>
+        </div>
+
+        <div class="footer-contact">
+          <h4 class="footer-links__title">Contato</h4>
+          <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="footer-links__link">WhatsApp</a>
+          <a href="mailto:contato@aiforbusinessleaders.com" class="footer-links__link">contato@aiforbusinessleaders.com</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>AI FOR BUSINESS LEADERS // 2025</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/XXXXXXXXXXX" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Conversar no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>

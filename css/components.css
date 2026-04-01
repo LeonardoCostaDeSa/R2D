@@ -1,0 +1,487 @@
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-body-sm);
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-full);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn--primary {
+  background: var(--gradient-quantum);
+  color: var(--color-white);
+  border: none;
+}
+
+.btn--primary:hover {
+  box-shadow: var(--shadow-violet);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--color-white);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn--ghost:hover {
+  border-color: var(--color-white);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.08);
+}
+
+.btn--ghost-dark {
+  color: var(--color-obsidian);
+  border-color: var(--color-gray-support);
+}
+
+.btn--ghost-dark:hover {
+  border-color: var(--color-violet);
+  color: var(--color-violet);
+}
+
+.btn--lg {
+  padding: 1rem 2.5rem;
+  font-size: var(--fs-body);
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-sm);
+}
+
+/* WhatsApp icon in button */
+.btn .icon-whatsapp {
+  width: 20px;
+  height: 20px;
+}
+
+/* ============================================
+   GRADIENT TEXT
+   ============================================ */
+.gradient-text {
+  background: var(--gradient-quantum);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   SEGMENTED LINE (Brand Signature)
+   ============================================ */
+.segmented-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 3px;
+}
+
+.segmented-line__violet {
+  width: 60px;
+  height: 3px;
+  background: var(--color-violet);
+  border-radius: 2px;
+}
+
+.segmented-line__white {
+  width: 16px;
+  height: 3px;
+  background: var(--color-white);
+  border-radius: 2px;
+  opacity: 0.6;
+}
+
+.segmented-line__blue {
+  width: 24px;
+  height: 3px;
+  background: var(--color-blue-electric);
+  border-radius: 2px;
+}
+
+/* Light mode variant */
+.section--light .segmented-line__white {
+  background: var(--color-gray-support);
+  opacity: 1;
+}
+
+.segmented-line--center {
+  justify-content: center;
+}
+
+.segmented-line--lg .segmented-line__violet {
+  width: 120px;
+}
+
+.segmented-line--lg .segmented-line__white {
+  width: 24px;
+}
+
+.segmented-line--lg .segmented-line__blue {
+  width: 40px;
+}
+
+/* ============================================
+   SECTION HEADERS
+   ============================================ */
+.section-header {
+  margin-bottom: var(--gap-xl);
+}
+
+.section-header--center {
+  text-align: center;
+}
+
+.section-header--center .segmented-line {
+  justify-content: center;
+}
+
+.overline {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-overline);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: var(--gap-sm);
+  display: block;
+}
+
+.section--dark .overline {
+  color: var(--color-violet);
+}
+
+.section--light .overline {
+  color: var(--color-violet);
+}
+
+.section-header .section-title {
+  font-size: var(--fs-h2);
+  margin-bottom: var(--gap-sm);
+}
+
+.section-header .section-subtitle {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  max-width: 640px;
+  line-height: 1.7;
+}
+
+.section--dark .section-subtitle {
+  color: var(--color-slate);
+}
+
+.section--light .section-subtitle {
+  color: var(--color-slate);
+}
+
+.section-header--center .section-subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+.card {
+  padding: var(--gap-md);
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.card--light {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-support);
+  position: relative;
+  overflow: hidden;
+}
+
+.card--light::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-quantum);
+  transform: scaleX(0);
+  transition: transform var(--transition-fast);
+}
+
+.card--light:hover {
+  border-color: rgba(159, 51, 255, 0.15);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+.card--light:hover::before {
+  transform: scaleX(1);
+}
+
+.card--dark {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.card--dark:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(159, 51, 255, 0.2);
+}
+
+.card__icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--gap-sm);
+}
+
+.card__title {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h4);
+  margin-bottom: var(--gap-xs);
+}
+
+.card__text {
+  font-size: var(--fs-body-sm);
+  line-height: 1.7;
+  color: var(--color-slate);
+}
+
+/* ============================================
+   DIAMOND BULLET
+   ============================================ */
+.diamond-bullet {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.diamond-bullet::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: var(--gradient-quantum);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  border-radius: 1px;
+}
+
+.diamond-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ============================================
+   STAT CARD
+   ============================================ */
+.stat {
+  text-align: center;
+  padding: var(--gap-md);
+}
+
+.stat__number {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-extrabold);
+  font-size: var(--fs-stat);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  background: var(--gradient-quantum);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat__label {
+  font-size: var(--fs-body-sm);
+  color: var(--color-slate);
+}
+
+.stat .segmented-line {
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* ============================================
+   TESTIMONIAL CARD
+   ============================================ */
+.testimonial {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--gap-md);
+  position: relative;
+  border: 1px solid var(--color-gray-support);
+  overflow: hidden;
+}
+
+.testimonial::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--gradient-quantum);
+}
+
+.testimonial__quote-mark {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: var(--fw-extrabold);
+  line-height: 1;
+  background: var(--gradient-quantum);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: -0.5rem;
+}
+
+.testimonial__text {
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  color: var(--color-obsidian);
+  margin-bottom: var(--gap-md);
+  font-style: italic;
+}
+
+.testimonial__divider {
+  height: 1px;
+  background: var(--color-gray-support);
+  margin-bottom: var(--gap-sm);
+}
+
+.testimonial__author {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-body-sm);
+}
+
+.testimonial__role {
+  font-size: var(--fs-overline);
+  color: var(--color-slate);
+}
+
+/* ============================================
+   FORM
+   ============================================ */
+.form-group {
+  margin-bottom: var(--gap-sm);
+}
+
+.form-label {
+  display: block;
+  font-size: var(--fs-body-sm);
+  font-weight: var(--fw-medium);
+  margin-bottom: 0.375rem;
+  color: var(--color-slate);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  color: var(--color-white);
+  font-size: var(--fs-body-sm);
+  transition: border-color var(--transition-fast);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--color-violet);
+  box-shadow: 0 0 0 3px rgba(159, 51, 255, 0.1);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-select option {
+  background: var(--color-obsidian);
+  color: var(--color-white);
+}
+
+/* ============================================
+   PHASE STEP (Methodology)
+   ============================================ */
+.phase {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--gap-md);
+  border-top: 3px solid transparent;
+  position: relative;
+  box-shadow: var(--shadow-card);
+}
+
+.phase:nth-child(1) {
+  border-top-color: var(--color-violet);
+}
+
+.phase:nth-child(2) {
+  border-top-color: var(--color-purple-deep);
+}
+
+.phase:nth-child(3) {
+  border-top-color: var(--color-blue-electric);
+}
+
+.phase__label {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-overline);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-violet);
+  margin-bottom: 0.5rem;
+}
+
+.phase__title {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h3);
+  margin-bottom: 0.75rem;
+  color: var(--color-obsidian);
+}
+
+.phase__text {
+  font-size: var(--fs-body-sm);
+  color: var(--color-slate);
+  line-height: 1.7;
+  margin-bottom: var(--gap-sm);
+}
+
+.phase__result {
+  background: var(--color-cool-white);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  font-size: var(--fs-body-sm);
+  border-left: 3px solid var(--color-cyan);
+}
+
+.phase__result strong {
+  color: var(--color-obsidian);
+}

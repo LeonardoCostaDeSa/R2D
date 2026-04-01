@@ -1,0 +1,103 @@
+/* ============================================
+   SCROLL-TRIGGERED ANIMATIONS
+   ============================================ */
+/* JS adds .js-ready to <html> after observer is set up */
+.js-ready .animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.js-ready .animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fallback: if JS never loads, everything is visible */
+
+/* Stagger children */
+.grid .animate-on-scroll:nth-child(2) {
+  transition-delay: 100ms;
+}
+
+.grid .animate-on-scroll:nth-child(3) {
+  transition-delay: 200ms;
+}
+
+.grid .animate-on-scroll:nth-child(4) {
+  transition-delay: 300ms;
+}
+
+/* Hero specific delays */
+.hero__content .animate-on-scroll:nth-child(1) { transition-delay: 0ms; }
+.hero__content .animate-on-scroll:nth-child(2) { transition-delay: 150ms; }
+.hero__content .animate-on-scroll:nth-child(3) { transition-delay: 300ms; }
+.hero__content .animate-on-scroll:nth-child(4) { transition-delay: 450ms; }
+.hero__content .animate-on-scroll:nth-child(5) { transition-delay: 600ms; }
+
+/* Gradient text shimmer on hover (subtle) */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Stat counter entrance */
+.stat.visible .stat__number {
+  animation: stat-pop 0.6s ease-out;
+}
+
+@keyframes stat-pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Card hover effects */
+.card--light {
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+/* Segmented line entrance */
+.js-ready .segmented-line.animate-on-scroll .segmented-line__violet,
+.js-ready .segmented-line.animate-on-scroll .segmented-line__white,
+.js-ready .segmented-line.animate-on-scroll .segmented-line__blue {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.js-ready .segmented-line.animate-on-scroll.visible .segmented-line__violet {
+  transform: scaleX(1);
+  transition-delay: 0ms;
+}
+
+.js-ready .segmented-line.animate-on-scroll.visible .segmented-line__white {
+  transform: scaleX(1);
+  transition-delay: 150ms;
+}
+
+.js-ready .segmented-line.animate-on-scroll.visible .segmented-line__blue {
+  transform: scaleX(1);
+  transition-delay: 300ms;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero__scroll-indicator {
+    animation: none;
+  }
+
+  .segmented-line.animate-on-scroll .segmented-line__violet,
+  .segmented-line.animate-on-scroll .segmented-line__white,
+  .segmented-line.animate-on-scroll .segmented-line__blue {
+    transform: none;
+    transition: none;
+  }
+}
