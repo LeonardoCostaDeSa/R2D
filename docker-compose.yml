@@ -1,0 +1,25 @@
+services:
+  r2d-lp:
+    build: .
+    container_name: r2d-lp
+    restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      # HTTP -> HTTPS redirect
+      - "traefik.http.routers.r2d-http.rule=Host(`formacaodelideranca.leonardosa.pro`)"
+      - "traefik.http.routers.r2d-http.entrypoints=web"
+      - "traefik.http.routers.r2d-http.middlewares=r2d-https-redirect"
+      - "traefik.http.middlewares.r2d-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.r2d-https-redirect.redirectscheme.permanent=true"
+      # HTTPS
+      - "traefik.http.routers.r2d.rule=Host(`formacaodelideranca.leonardosa.pro`)"
+      - "traefik.http.routers.r2d.entrypoints=websecure"
+      - "traefik.http.routers.r2d.tls=true"
+      - "traefik.http.routers.r2d.tls.certresolver=letsencrypt"
+      - "traefik.http.services.r2d.loadbalancer.server.port=80"
+    networks:
+      - traefik
+
+networks:
+  traefik:
+    external: true

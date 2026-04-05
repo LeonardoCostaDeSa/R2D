@@ -1,0 +1,8 @@
+.git
+.github
+.claude
+extracted_images
+*.pptx
+*.md
+.dockerignore
+.gitignore
