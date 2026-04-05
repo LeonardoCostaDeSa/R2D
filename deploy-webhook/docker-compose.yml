@@ -1,0 +1,24 @@
+services:
+  deploy-webhook:
+    build: .
+    container_name: r2d-deploy-webhook
+    restart: unless-stopped
+    environment:
+      - DEPLOY_TOKEN=${DEPLOY_TOKEN}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /opt/r2d:/opt/r2d
+    working_dir: /opt/r2d
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.r2d-webhook.rule=Host(`formacaodelideranca.leonardosa.pro`) && Path(`/deploy-webhook`)"
+      - "traefik.http.routers.r2d-webhook.entrypoints=websecure"
+      - "traefik.http.routers.r2d-webhook.tls=true"
+      - "traefik.http.routers.r2d-webhook.tls.certresolver=letsencrypt"
+      - "traefik.http.services.r2d-webhook.loadbalancer.server.port=9000"
+    networks:
+      - traefik-public
+
+networks:
+  traefik-public:
+    external: true
