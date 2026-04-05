@@ -18,8 +18,8 @@ services:
       - "traefik.http.routers.r2d.tls.certresolver=letsencrypt"
       - "traefik.http.services.r2d.loadbalancer.server.port=80"
     networks:
-      - traefik
+      - traefik-public
 
 networks:
-  traefik:
+  traefik-public:
     external: true
